@@ -363,3 +363,50 @@ success_msg("Ja, genau - Schauen Sie sich gern Ihre selbst erstellte Tabelle an!
 ex() %>% check_code("report.wochenverkaeufe[1,2] <- 8", fixed=TRUE, missing_msg="Sie haben den Fehler noch nicht richtig ausgebessert!") 
 success_msg("Ja, genau - sonst wären falsche Umsatzzahlen an die Verkaufsniederlassung weitergegeben worden!")
 ```
+
+---
+
+## Data Frames
+
+```yaml
+type: NormalExercise
+key: 80479aab8d
+xp: 100
+```
+
+Bislang war immer von einem Vektor die Rede. Des Weiteren gibt es noch Matrizen, die sehr häufig Anwendung finden. Aufgrund der Kürze der Einführung in diesem Kurs kommen wir direkt zu **Data Frames**:
+
+Datensätze bestehen sehr häufig aus unterschiedlichen Datentypen (Produktnamen, Preis, Datum der Herstellung). In eine Matrix bekommen Sie die Daten nur, wenn Sie alles in Text umwandeln, was die Auswertung erschwert. Geeigneter sind da Data Frames, ein Datenobjekt, in dem Sie alle Daten unterschielichen Typs speichern können (de Vries/Meys 2018).
+
+- Struktur und Datentyp anzeigen lassen: **str()**
+- Anzahl der Zeilen bzw. Spalten ausgeben lassen: **nrow() bzw. ncol()**
+
+`@instructions`
+Der Datensatz aus dem Unternehmen Bambergus, der aus der zentralen Kundendatenbank stammt, enthält verschiedene Kundeninformationen.
+Der Datensatz wurde schon eingelesen und ist der Variable **Kundendaten** zugewiesen worden.
+
+1. Was beinhaltet der Datensatz an Informationen, bzw. welchen Datentypen kommen vor?
+2. Wie viele Kunden sind im Kundendatensatz aufgelistet, wenn Sie davon ausgehen, dass es keine doppelten Kunden gibt?
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+Kundendaten <- read.csv2("https://assets.datacamp.com/production/repositories/5032/datasets/59b8181ca10c38e979057892346adb33736a2198/dataApr-1-2019.csv")
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
+```

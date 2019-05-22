@@ -155,3 +155,135 @@ ex() %>% check_object("mean_time") %>% check_equal("mean(sell.time)")
 ex() %>% check_object("mean_time") %>% check_equal(8)
 success_msg("Ja, genau - es sieht so aus als hätten Sie das Erzeugen von Vektoren verstanden! Die durschnittliche Arbeitszeit an den Arbeitstagen beträgt 7h") 
 ```
+
+---
+
+## Variablenzuweisung
+
+```yaml
+type: NormalExercise
+key: 075b9b30a8
+xp: 100
+```
+
+Variablenzuweisung
+
+Ein grundlegendes Konzept in der (statistischen) Programmierung sind Variablen.
+
+Eine Variable ermöglicht es einen Wert (z.B. 5) oder ein Objekt (z.B. Funktionsbeschreibung) in R zu speichern. Später können Sie den Namen der Variable nutzen, um einfach auf den Wert oder das Objekt zuzugreifen, die innerhalb dieser Variablen hinterlegt sind.
+
+So können Sie der Variable my_var den Wert 5 zuweisen: **my_var <- 5**
+
+`@instructions`
+Ihre Aufgabe: 
+Vervollständigen Sie bitte den Code im Editor, sodass der Variable x der Wert 105 zugeordnet wird. Schicken Sie dann die Antwort ab. 
+Wenn Sie R nach x fragen, wird der vorher zu gewiesene Wert angezeigt.
+
+`@hint`
+Der Variable my_var wurde im Beispiel der Wert 5 zugeteilt. Orientieren Sie sich einfach an dieser Vorgehensweise.
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+# Weisen Sie x den Wert 105 zu
+x <- 105
+# Geben Sie den Wert der Variable x aus
+x
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("x") %>% check_equal(105)
+ex() %>% check_code(c("print(x)", "x"))
+ex() %>% check_output("105", fixed=TRUE, missing_msg="So ist das nicht ganz richtig!")
+success_msg("Ja, genau: x <- 105 erzeugt keine Ausgabe, weil R davon ausgeht, dass Sie diese Variable in der Zukunft benötigen! Gehen Sie bitte zur nächsten Aufgabe")
+```
+
+---
+
+## Basisdatentypen in R
+
+```yaml
+type: NormalExercise
+key: 9e06fa7a5f
+xp: 100
+```
+
+R arbeitet mit zahlreichen Datentypen und ist sensitiv auf Groß-/Kleinschreibung. Einige der grundlegendsten Datentypen sind:
+
+- Boolesche Werte oder auch als Wahrheitswerte bezeichnet (TRUE oder FALSE) werden auch 'Logical' genannt.
+- Dezimalwerte (z.B. 3.4) werden 'numeric' genannt (z.B. )
+- Zeichenketten und Buchstaben (Strings) ("Hallo") werden auch als 'character' bezeichnet.
+- Kategorien (A,B,C) werden auch als 'factor' bezeichnet.
+
+**Wichtig:** Zeichenketten werden in "Anführungszeichen" gesetzt.
+
+`@instructions`
+Von einer kleineren Tochtergesellschaft, die neu eröffnet hat, hat Herr Müller einen Kundendatensatz zugeschickt bekommen. Ihr Chef Herr Müller sagt, dass die Mitarbeiter dort noch nicht vertraut mit den Datentypen seien und Sie sich deswegen genau mit den Basisdatentypen beschäftigen müssen, damit die Mitarbeiter von Ihnen eine Vorlage bekommen können. 
+
+1. Geben Sie den Wert von Anzahl_Mitarbeiter aus.
+ 
+	Ändern Sie die Werte von:
+ 2. Variable my_numeric zu 13.
+ 3. Variable my_character zu der Zeichenkette universe.
+ 4. Variable my_logical zu FALSE.
+
+`@hint`
+```
+1. Kommen Sie, einfach die Variable reinschreiben oder mit dem Operator print(Variable) ausgeben lassen.
+```
+```
+2. Ersetzen Sie die Werte im Editor mit den Werten, die bei der Anweisung vorgegeben sind. 
+Zum Beispiel: my_numeric <- 13 , um der Variable my_numeric den Wert 13 zuzuweisen.
+```
+
+`@pre_exercise_code`
+```{r}
+Anzahl_Mitarbeiter <- "Schmidt, Klaus"
+Termin <- 2019-09-21
+```
+
+`@sample_code`
+```{r}
+# Ausgabe Anzahl_Mitarbeiter:
+
+# Weisen Sie der Variablen Anzahl_Mitarbeiter den Wert 17 zu:
+
+# Bennen Sie my_office mit der Zeichenkette Nordwand:
+
+# Überprüfen Sie, ob Begrueßungstermin eine Datumsangabe ist:
+
+```
+
+`@solution`
+```{r}
+# Die Anzahl der Mitarbeiter müsste eine numerische Zahl. Überprüfen Sie dies bitte: 
+is.numeric(Anzahl_Mitarbeiter)
+# Ausgabe Anzahl_Mitarbeiter:
+#print(Anzahl_Mitarbeiter)
+# Weisen Sie der Variablen Anzahl_Mitarbeiter den Wert 17 zu:
+#Anzahl_Mitarbeiter <- 17
+# Weisen Sie my_office die Zeichenkette Nordwand zu:
+#my_office <- "Nordwand"
+# Überprüfen Sie, ob Begrueßungstermin eine Datumsangabe ist:
+#is.Date(Begrueßungstermin)
+```
+
+`@sct`
+```{r}
+#ex() %>% check_code(c("print(my_nummerus)", "my_nummerus"), fixed = TRUE)
+#ex() %>% check_output("3", fixed=TRUE, missing_msg="Da stimmt etwas nicht!")
+#ex() %>% check_object("my_numeric")   %>% check_equal(54)
+#ex() %>% check_object("my_character") %>% check_equal("universe")
+#ex() %>% check_object("my_logical")   %>% check_equal("FALSE")
+#success_msg("Ja, genau - es sieht so aus als hätten Sie die Basisdatentypen verstanden!")
+```
